@@ -117,7 +117,7 @@ def train():
         stateOld = intelligentGameAgent.getState(game)
         finalMove = intelligentGameAgent.getAction(stateOld)
 
-        # Na podstawie wykonanego ruchu przypisywane są nagroda, stan zakończenia gry, aktualne punkty. 
+        # Based on the move made, a reward, game end status, and current points are assigned.
         reward, done, score = game.play(finalMove)
 
         # Assign a new game state
