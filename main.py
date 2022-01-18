@@ -99,7 +99,7 @@ class IntelligentGameAgent:
         else: # after completing the learning stage, around 80 iterations, the model begins to use predictions
             state0 = torch.tensor(state, dtype=torch.float)
             prediction = self.model(state0)
-            move = torch.argmax(prediction).item() # zwracane zostaje największe przewidywanie np [8, 2, 3] co oznacza ruch w obecnym kierunku bez zmian
+            move = torch.argmax(prediction).item() # the greatest prediction is returned, eg [8, 2, 3] which means to move in the current direction unchanged
             finalMove[move] = 1
 
         return finalMove
