@@ -26,7 +26,7 @@ class Linear_QNet(nn.Module):
             os.makedirs(modelFolderPath)
 
         fileName = os.path.join(modelFolderPath, fileName)
-        torch.save(self.state_dict(), fileName) # zapis słownika wyników do pliku
+        torch.save(self.state_dict(), fileName) # save scores dict to file
 
 
 class QTrainer:
