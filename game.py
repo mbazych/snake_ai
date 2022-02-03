@@ -3,13 +3,11 @@ import random
 from enum import Enum
 from collections import namedtuple
 import numpy as np
-import sys
-sys.setrecursionlimit(10000)
 
 pygame.init()
 
 class Direction(Enum):
-    # Crate ENUM for Directions
+    # Create ENUM for Directions
     RIGHT   = 1
     LEFT    = 2
     UP      = 3
@@ -66,10 +64,8 @@ class Game:
     def placeNewFood(self):
 
         # Create initial food positions (x)
-        self.food_x = [20, 60,  20, 80, 100, 120, 200, 260, 300, 320, 80, 240, 380]
-        self.x = self.food_x[self.i]
-
-        self.y =self.food_x[self.i]
+        self.x = random.randint(0, (self.width-TILE_PIXELS )//TILE_PIXELS )*TILE_PIXELS
+        self.y = random.randint(0, (self-TILE_PIXELS )//TILE_PIXELS )*TILE_PIXELS
 
         self.food = Position(self.x, self.y)
         if self.food in self.body:

@@ -47,7 +47,7 @@ class QTrainer:
 
         # function to check if state is multi dimensionsal or single (teaches for one movement and many moevements in learning whole iteration)
         if len(state.shape) == 1:
-            # if single dimensionnal, return single dimensional values
+            # if single dimensional, return single dimensional values
             state = torch.unsqueeze(state, 0)
             nextState = torch.unsqueeze(nextState, 0)
             action = torch.unsqueeze(action, 0)

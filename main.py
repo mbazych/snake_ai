@@ -9,7 +9,7 @@ from plotter import plot
 MAX_MEMORY = 100_000
 BATCH_SIZE = 1000
 # learning tempo
-LR = 0.01
+LR = 0.001
 
 class IntelligentGameAgent:
 
@@ -70,7 +70,7 @@ class IntelligentGameAgent:
 
         return np.array(state, dtype=int) # convert to int
 
-    # function used to store tuples, if excveeds maximum memory throw from left to right
+    # function used to store tuples, if exceeds maximum memory throw from left to right
     def remember(self, state, action, reward, next_state, done):
         self.memory.append((state, action, reward, next_state, done))
 
